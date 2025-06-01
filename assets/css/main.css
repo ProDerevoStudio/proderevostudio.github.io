@@ -1241,6 +1241,7 @@ input, select, textarea {
 			#wrapper {
 				padding: 1rem;
 			}
+			
 
 		}
 
@@ -1797,36 +1798,7 @@ input, select, textarea {
                 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-/* Навигационные кнопки */
-.nav-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin: 1.5rem 0;
-    padding: 0;
-}
 
-.nav-button {
-    padding: 12px 20px;
-    font-size: 0.7rem;
-    white-space: nowrap;
-}
-
-@media screen and (max-width: 480px) {
-    .nav-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-    }
-    
-    .nav-button {
-        width: 100%;
-        text-align: center;
-        padding: 10px;
-        font-size: 0.65rem;
-    }
-}
 
 /* Адаптивность */
 /* Адаптация статей */
@@ -1855,42 +1827,64 @@ input, select, textarea {
         margin: 1rem 0;
     }
 }
-/* Стили для кнопок навигации */
+/* Основные стили кнопок */
 .nav-buttons {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 12px;
+    margin: 2rem auto;
     padding: 0;
-    margin: 2rem 0 0 0;
+    width: 100%;
+    max-width: 100%;
 }
 
 .nav-button {
     display: inline-block;
-    padding: 12px 25px;
-    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 20px;
+    min-width: 140px; /* Фиксированная минимальная ширина */
+    text-align: center;
+    background: rgba(201, 255, 130, 0.1);
     border: 1px solid #c9ff82;
     border-radius: 4px;
     color: #c9ff82;
     text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    font-size: 0.8rem;
+    letter-spacing: 0.15rem;
+    font-size: 0.7rem;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
-                0 1px 3px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
 }
 
-.nav-button:hover {
-    background: rgba(201, 255, 130, 0.2);
-    transform: translateY(-2px);
-    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1), 
-                0 3px 6px rgba(0, 0, 0, 0.08);
+/* Адаптация для мобильных */
+@media screen and (max-width: 736px) {
+    .nav-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 1.5rem 0;
+        padding: 0 10px;
+    }
+    
+    .nav-button {
+        min-width: calc(50% - 10px); /* 2 кнопки в ряд */
+        padding: 10px 5px;
+        font-size: 0.65rem;
+        letter-spacing: 0.1rem;
+    }
 }
 
-.nav-button:active {
-    transform: translateY(0);
+@media screen and (max-width: 480px) {
+    .nav-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .nav-button {
+        min-width: 100%;
+        padding: 12px 5px;
+    }
 }
 
 /* Стили для раздела контактов */
