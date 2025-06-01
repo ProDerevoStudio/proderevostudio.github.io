@@ -6,21 +6,6 @@
 	For personal and commercial use under the CCA 3.0 license (https://disordercaffe.github.io//license)
 */
 
-/* Базовые мобильные стили */
-@media screen and (max-width: 736px) {
-    body, html {
-        overflow-x: hidden;
-    }
-    
-    #wrapper {
-        padding: 1.5rem;
-    }
-    
-    p {
-        font-size: 0.9rem;
-        line-height: 1.6;
-    }
-}
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -47,6 +32,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+
 
 ol, ul {
 	list-style: none;
@@ -1905,18 +1891,6 @@ input, select, textarea {
 
 .nav-button:active {
     transform: translateY(0);
-}
-
-/* Фикс для кнопки Контакты */
-@media screen and (max-width: 400px) {
-    #header .content .inner {
-        padding: 2rem 0.5rem;
-    }
-    
-    #header nav ul li a {
-        min-width: unset;
-        padding: 0 0.8rem;
-    }
 }
 
 /* Стили для раздела контактов */
